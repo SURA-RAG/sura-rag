@@ -1,10 +1,10 @@
 # sura-rag
 
-[![PyPI version](https://img.shields.io/pypi/v/sura-rag.svg)](https://pypi.org/project/sura-rag/)
-[![Downloads](https://img.shields.io/pypi/dm/sura-rag.svg)](https://pypi.org/project/sura-rag/)
-[![Python versions](https://img.shields.io/pypi/pyversions/sura-rag.svg)](https://pypi.org/project/sura-rag/)
+[![PyPI version](https://img.shields.io/pypi/v/sura-rag)](https://pypi.org/project/sura-rag/)
+[![Downloads](https://img.shields.io/pypi/dm/sura-rag)](https://pypi.org/project/sura-rag/)
+[![Python versions](https://img.shields.io/pypi/pyversions/sura-rag)](https://pypi.org/project/sura-rag/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/SURA-RAG/sura-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/SURA-RAG/sura-rag/actions/workflows/ci.yml)
+
 
 **Verified data deletion and runtime leak detection for RAG systems.** GDPR Article 17 compliant forget pipeline with multi-strategy leak probing, runtime guardrailing, and signed compliance certificates. 100% local, zero cloud API required.
 
