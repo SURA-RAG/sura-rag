@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sura-rag"
+version = "0.1.0"
+description = "Verified data deletion and leak detection for RAG systems"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Aditya Saxena", email = "madityasaxena@gmail.com" }]
+keywords = [
+    "rag", "machine-unlearning", "gdpr", "llm-safety",
+    "right-to-be-forgotten", "leak-detection", "compliance",
+    "langchain", "llamaindex", "chromadb"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+]
+
+# Core deps — work on any machine, no GPU required
+dependencies = [
+    "chromadb>=0.5.0",
+    "qdrant-client>=1.9.0",
+    "faiss-cpu>=1.8.0",
+    "ollama>=0.2.0",
+    "numpy>=1.26.0",
+    "sqlalchemy>=2.0.0",
+    "reportlab>=4.2.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+    "typer>=0.12.0",
+]
+
+[project.optional-dependencies]
+# CPU embeddings via sentence-transformers
+cpu = ["sentence-transformers>=3.0.0", "torch>=2.2.0"]
+
+# CUDA embeddings — user must pre-install CUDA torch
+# pip install torch --index-url https://download.pytorch.org/whl/cu121
+# then: pip install sura-rag[cuda]
+cuda = ["sentence-transformers>=3.0.0"]
+
+# Framework connectors
+langchain = ["langchain>=0.2.0", "langchain-community>=0.2.0"]
+llamaindex = ["llama-index>=0.10.0"]
+
+# HuggingFace backend (alternative to Ollama)
+hf = ["transformers>=4.40.0", "huggingface-hub>=0.23.0", "accelerate>=0.30.0"]
+
+# Pandas for audit log export
+pandas = ["pandas>=2.0.0"]
+
+# Everything
+all = [
+    "sentence-transformers>=3.0.0",
+    "langchain>=0.2.0",
+    "langchain-community>=0.2.0",
+    "llama-index>=0.10.0",
+    "transformers>=4.40.0",
+    "huggingface-hub>=0.23.0",
+    "pandas>=2.0.0",
+]
+
+# Development
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+sura = "sura_rag.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/Anakintano/sura-rag"
+Repository = "https://github.com/Anakintano/sura-rag"
+Issues = "https://github.com/Anakintano/sura-rag/issues"
+Changelog = "https://github.com/Anakintano/sura-rag/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["sura_rag"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

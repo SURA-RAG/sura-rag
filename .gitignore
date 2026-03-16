@@ -1,0 +1,40 @@
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+coverage.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data
+chroma_db/
+*.db
+demo_chroma_db/
+langchain_demo_db/
+audit_demo_db/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Certificates
+certificate_demo.pdf
