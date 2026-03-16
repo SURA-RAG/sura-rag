@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "sura-rag"
 version = "0.1.0"
-description = "Verified data deletion and leak detection for RAG systems"
+description = "Verified data deletion and runtime leak detection for RAG systems. GDPR Article 17 compliant."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
@@ -16,14 +16,19 @@ keywords = [
     "langchain", "llamaindex", "chromadb"
 ]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
 ]
 
 # Core deps — work on any machine, no GPU required
@@ -89,7 +94,8 @@ sura = "sura_rag.cli:app"
 Homepage = "https://github.com/SURA-RAG/sura-rag"
 Repository = "https://github.com/SURA-RAG/sura-rag"
 Issues = "https://github.com/SURA-RAG/sura-rag/issues"
-Changelog = "https://github.com/SURA-RAG/sura-rag/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/SURA-RAG/sura-rag/blob/master/CHANGELOG.md"
+Documentation = "https://github.com/SURA-RAG/sura-rag#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["sura_rag"]
