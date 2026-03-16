@@ -86,10 +86,10 @@ dev = [
 sura = "sura_rag.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/Anakintano/sura-rag"
-Repository = "https://github.com/Anakintano/sura-rag"
-Issues = "https://github.com/Anakintano/sura-rag/issues"
-Changelog = "https://github.com/Anakintano/sura-rag/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/SURA-RAG/sura-rag"
+Repository = "https://github.com/SURA-RAG/sura-rag"
+Issues = "https://github.com/SURA-RAG/sura-rag/issues"
+Changelog = "https://github.com/SURA-RAG/sura-rag/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["sura_rag"]

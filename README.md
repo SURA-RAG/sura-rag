@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/sura-rag.svg)](https://pypi.org/project/sura-rag/)
 [![Python versions](https://img.shields.io/pypi/pyversions/sura-rag.svg)](https://pypi.org/project/sura-rag/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/Anakintano/sura-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Anakintano/sura-rag/actions/workflows/ci.yml)
+[![Tests](https://github.com/SURA-RAG/sura-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/SURA-RAG/sura-rag/actions/workflows/ci.yml)
 
 **Verified data deletion and runtime leak detection for RAG systems.** GDPR Article 17 compliant forget pipeline with multi-strategy leak probing, runtime guardrailing, and signed compliance certificates. 100% local, zero cloud API required.
 
@@ -127,7 +127,7 @@ ollama serve
 ```bash
 pip install sura-rag
 # or for development:
-git clone https://github.com/Anakintano/sura-rag.git
+git clone https://github.com/SURA-RAG/sura-rag.git
 cd sura-rag
 pip install -e ".[dev,cpu]"
 ```
@@ -171,7 +171,7 @@ If you use sura-rag in academic research, please cite:
   title = {sura-rag: Verified Data Deletion and Leak Detection for RAG Systems},
   author = {Saxena, Aditya},
   year = {2024},
-  url = {https://github.com/Anakintano/sura-rag},
+  url = {https://github.com/SURA-RAG/sura-rag},
   license = {MIT},
 }
 ```
