@@ -187,10 +187,10 @@ MIT License. See [LICENSE](LICENSE) for details.
 If you use sura-rag in academic research, please cite:
 
 ```bibtex
-@software{sura_rag_2025,
+@software{sura_rag_2026,
   title = {sura-rag: Verified Data Deletion and Leak Detection for RAG Systems},
   author = {Saxena, Aditya},
-  year = {2025},
+  year = {2026},
   url = {https://github.com/SURA-RAG/sura-rag},
   license = {MIT},
 }
